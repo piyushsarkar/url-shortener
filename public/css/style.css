@@ -1,0 +1,54 @@
+.input-group-append .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.input-group-append .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.input-group-append:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.copy-area input[type="text"], .copy-area button{
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+#get-link:hover{
+    background: black;
+}
+@media only screen and (min-width: 992px){
+    #get-link {
+        float: right;
+    }
+    #main-url {
+        width: 790px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #main-url {
+        width: 980px;
+    }
+}

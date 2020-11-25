@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>URL Shortener</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e9ecef">
+        <a class="navbar-brand" href="/">
+            <img src="img/favicon.ico" width="30" height="30"
+                class="d-inline-block align-top" alt="" loading="lazy"/>
+            URL Shortener
+        </a>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">URL Shortener</h1>
+            <p class="lead">Simple and fast URL shortener!</p>
+        </div>
+    </div>
+    <div class="container">
+        <form id="input-form">
+        <div class="row text-center">
+            <div class="col-lg-10 col-md-12">
+                <input required id="main-url" autocomplete="off" placeholder="Enter the link here" type="text" class="form-control mr-2 shadow p-4 mb-3 bg-white rounded" spellcheck="false" />
+            </div>
+            <div class="col-lg-2 col-md-12">
+                <button id="get-link" class="btn btn-outline-secondary shadow rounded mb-5" type="submit" style="padding:12px;">
+                    Shorten URL
+                </button>
+            </div>
+        </div>
+     </form>
+        <div class="row copy-area">
+            <div class="input-group mb-3 mx-3">
+                <input id="copy-field" type="text" class="form-control" readonly="readonly">
+                <div class="input-group-append">
+                    <button id="copy-btn" class="btn btn-outline-secondary" type="button" onmouseout="outFunc()">
+                        <span class="tooltiptext" id="myTooltip">Copy url</span>
+                        Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
